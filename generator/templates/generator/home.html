@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container text-center">
+
+      <h1>Password Generator</h1>
+    <form action="{% url 'password' %}" >
+      <!-- method="post" -->
+      
+      <select name="length">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8" selected="selected">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>  Length<br>
+      <input type="checkbox" name="uppercase" value="Uppercase"> Uppercase<br>
+      <input type="checkbox" name="numbers" value="Numbers"> Numbers<br>
+      <input type="checkbox" name="special" value="Special"> Special<br>
+      <input type="submit" name="gen_pass" value="Generate" class="btn btn-primary">
+    </form>
+  </div>
+  </body>
+</html>
